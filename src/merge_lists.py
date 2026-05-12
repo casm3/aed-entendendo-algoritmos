@@ -1,4 +1,3 @@
-from src.my_node import MyNode
 
 
 def merge_lists(list1, list2):
@@ -33,4 +32,3 @@ def merge_lists(list1, list2):
         current.next = list2
 
     return head
-

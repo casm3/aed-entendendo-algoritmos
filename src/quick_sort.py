@@ -1,4 +1,3 @@
-from src.my_array import MyArray
 
 
 def partition(arr, low, high):

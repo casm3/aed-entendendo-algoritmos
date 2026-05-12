@@ -1,4 +1,3 @@
-from src.my_node import MyNode
 
 
 def kth_to_last(head, k):
