@@ -2,7 +2,7 @@ from src.my_array import MyArray
 
 
 def merge(left, right):
-    result = []
+    result = MyArray()
 
     i = 0
     j = 0
@@ -32,7 +32,20 @@ def merge_sort(arr):
 
     middle = len(arr) // 2
 
-    left = merge_sort(arr[:middle])
-    right = merge_sort(arr[middle:])
+    left = MyArray()
+    right = MyArray()
+
+    i = 0
+
+    while i < middle:
+        left.append(arr[i])
+        i += 1
+
+    while i < len(arr):
+        right.append(arr[i])
+        i += 1
+
+    left = merge_sort(left)
+    right = merge_sort(right)
 
     return merge(left, right)
