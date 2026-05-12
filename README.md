@@ -281,6 +281,7 @@ Dada a referência para o primeiro nó de uma lista encadeada, implemente uma fu
 - ✅ A inversão deve ser feita apenas manipulando os ponteiros (`next`)
 - ✅ A função deve retornar o novo `head` da lista
 
+
 #### 💡 Exemplos de uso
 
 ```bash
