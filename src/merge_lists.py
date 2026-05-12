@@ -1,5 +1,38 @@
 from src.my_node import MyNode
 
 
-def merge_lists(lista1: MyNode, lista2: MyNode) -> MyNode:
-    raise NotImplementedError
+def merge_lists(
+    list1: MyNode,
+    list2: MyNode,
+) -> MyNode:
+    if list1 is None:
+        return list2
+
+    if list2 is None:
+        return list1
+
+    if list1.value <= list2.value:
+        head = list1
+        list1 = list1.next
+    else:
+        head = list2
+        list2 = list2.next
+
+    current = head
+
+    while list1 is not None and list2 is not None:
+        if list1.value <= list2.value:
+            current.next = list1
+            list1 = list1.next
+        else:
+            current.next = list2
+            list2 = list2.next
+
+        current = current.next
+
+    if list1 is not None:
+        current.next = list1
+    else:
+        current.next = list2
+
+    return head
