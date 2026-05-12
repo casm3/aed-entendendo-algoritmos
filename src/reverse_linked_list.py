@@ -1,9 +1,17 @@
-from src.my_array import MyArray
+from src.my_node import MyNode
 
 
-def two_sum(array: MyArray, target: int) -> tuple[int, int]:
-    for i in range(len(array)):
-        for j in range(len(array)):
-            if array[i] + array[j] == target and i != j:
-                return (i, j)
-    return (-1, -1)
+def reverse_linked_list(head: MyNode) -> MyNode:
+
+    previous = None
+    current = head
+
+    while current is not None:
+
+        next_node = current.next
+        current.next = previous
+
+        previous = current
+        current = next_node
+
+    return previous
