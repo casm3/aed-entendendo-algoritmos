@@ -2,4 +2,16 @@ from src.my_node import MyNode
 
 
 def kth_to_last(head: MyNode, k: int) -> int:
-    raise NotImplementedError
+    fast = head
+    slow = head
+
+    for _ in range(k):
+        if fast is None:
+            return -1
+        fast = fast.next
+
+    while fast is not None:
+        slow = slow.next
+        fast = fast.next
+
+    return slow.value if slow is not None else -1
