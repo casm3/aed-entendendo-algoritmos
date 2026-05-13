@@ -10,14 +10,21 @@ def merge_sort(array: MyArray) -> MyArray:
     
     meio = tam_array // 2
     
-    esq_array = array[:meio]
-    dir_array = array[meio:]
-
+    esq_array = MyArray()
+    
+    for i in range (meio):
+        esq_array.insert(i, array[i])        
+    
+    dir_array = MyArray()
+    
+    for i in range (meio, tam_array):
+        dir_array.insert(i - meio, array[i])
+    
+    
     esq_array = merge_sort(esq_array)
     dir_array = merge_sort(dir_array)
     
     #merge
-    MyArray()
     array_mesc = MyArray()
 
     i = 0 #pont esq

@@ -7,15 +7,16 @@ def remove_duplicates(head: MyNode) -> MyNode:
     
     while esq is not None:
         
-        dir = esq
+        dir_old = esq
+        dir = esq.next
         
-        while dir and dir.next is not None:
-            dir_old = dir
-            dir = dir_old.next
-            dir_new = dir.next
+        while dir is not None:
             if dir.value == esq.value:
-                dir_old.next = dir_new
-            dir = dir_old
+                dir_old.next = dir.next
+                dir = dir.next
+            else: 
+                dir_old = dir
+                dir = dir.next
         
         esq = esq.next               
     
