@@ -2,4 +2,16 @@ from src.my_node import MyNode
 
 
 def reverse_linked_list(head: MyNode) -> MyNode:
-    raise NotImplementedError
+    if head is None or head.next is None:
+        return head
+
+    anterior = None
+    atual = head
+
+    while atual is not None:
+        proximo_no = atual.next
+        atual.next = anterior
+        anterior = atual
+        atual = proximo_no
+
+    return anterior
