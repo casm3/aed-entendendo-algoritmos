@@ -9,12 +9,12 @@ def kth_to_last(head: MyNode, k: int) -> int:
         if leader is None:
             return -1
         leader = leader.next
-    
+
     while leader is not None:
         leader = leader.next
         follower = follower.next
-    
+
     if follower is None:
         return -1
-    
+
     return follower.value

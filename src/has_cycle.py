@@ -11,5 +11,5 @@ def has_cycle(head: MyNode) -> bool:
 
         if slow == fast:
             return True
-        
+
     return False

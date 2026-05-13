@@ -5,11 +5,13 @@ def quick_sort(array: MyArray) -> MyArray:
     _quick_sort(array, 0, len(array) - 1)
     return array
 
+
 def _quick_sort(array: MyArray, low: int, high: int):
     if low < high:
         pivot = _partition(array, low, high)
         _quick_sort(array, low, pivot - 1)
         _quick_sort(array, pivot + 1, high)
+
 
 def _partition(array: MyArray, low: int, high: int) -> int:
     pivot = array[high]

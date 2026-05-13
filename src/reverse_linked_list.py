@@ -11,4 +11,3 @@ def reverse_linked_list(head: MyNode) -> MyNode:
         prev = current
         current = next_node
     return prev
-

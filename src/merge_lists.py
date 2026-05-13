@@ -23,10 +23,10 @@ def merge_lists(lista1: MyNode, lista2: MyNode) -> MyNode:
             current.next = lista2
             lista2 = lista2.next
         current = current.next
-    
+
     if lista1 is not None:
         current.next = lista1
     if lista2 is not None:
         current.next = lista2
-    
+
     return head

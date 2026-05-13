@@ -15,6 +15,7 @@ def merge_sort(array: MyArray) -> MyArray:
 
     return _merge(merge_sort(left), merge_sort(right))
 
+
 def _merge(left: MyArray, right: MyArray) -> MyArray:
     merged = MyArray()
     i = 0

@@ -2,9 +2,9 @@ from src.my_node import MyNode
 
 
 def remove_duplicates(head: MyNode) -> MyNode:
-    if head is None:    
+    if head is None:
         return None
-    
+
     current = head
 
     while current is not None:
