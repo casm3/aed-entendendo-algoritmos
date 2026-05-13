@@ -20,3 +20,5 @@ class MyStack:
         if self.is_empty():
             return None
         return self.data[-1]
+    def __repr__(self) -> str:
+        return f"MyStack({self.data})"
